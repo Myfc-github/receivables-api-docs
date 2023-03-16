@@ -6,7 +6,7 @@
 
 O projeto utiliza [Docker](https://www.docker.com/), sendo ele a única dependência.
 
-Para rodar a documentação basta executar para fazer o build da documentação e rodar o servidor:
+Para rodar a documentação basta executar o comando abaixo, que realizará o build da documentação e iniciar o servidor:
 
 ```sh
 docker-compose up -d
