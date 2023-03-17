@@ -1,49 +1,55 @@
-# This is a basic workflow to help you get started with Actions
+# Esse é o fluxo de continuous deployment (CD),
+# com o objetivo final de atualizar a documentação do Fintera Recebíveis no GitHub Pages.
 
 name: CD
 
-# Controls when the action will run.
+# O fluxo é disparado apenas quando houver um push ou pull request mergeado na branch `main`.
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Permitir rodar esse fluxo manualmente na interface do GitHub Actions.
   workflow_dispatch:
 
+# Permissões necessárias para usar o token do GitHub e realizar o deploy no GitHub Pages.
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# Definição do fluxo em si de CD.
 jobs:
   deploy:
+    # Ao final do fluxo irá printar a URL da documentação.
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Faz o checkout do repositório para o $GITHUB_WORKSPACE, onde o job tem acesso ao código.
       - name: Checkout
         uses: actions/checkout@v3
 
+      # Inicia o container do Slate, pois iremos fazer o build dentro do container que já possui todas as dependências necessárias.
       - name: Start Docker Compose
         run: docker-compose up -d
 
+      # Realizar o build dos arquivos da documentação que estão em ./source para a pasta ./build.
       - name: Build docs
         run: docker-compose exec -T slate sh -c 'bundle exec middleman build'
 
+      # Realizar a configuração do GitHub Pages.
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
+      # Envia todos os arquivos da pasta ./build/ para o GitHub Pages.
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: './build/'
 
+      # Faz o deploy do GitHub Pages para atualizar o mesmo.
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
