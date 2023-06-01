@@ -90,7 +90,7 @@ Atributo  | Obrigatório | Descrição
 description | Não | Descrição do recebível.
 observation | Não | Observações adicionais.
 gross_value | Sim | O valor bruto do recebível, sem descontos ou taxas.
-payment_method | Sim | A forma de pagamento (opções aceitas: _credit_card_, _debit_card_, _boleto_, _bank_transfer_, _pix_, _cash_).
+payment_method | Sim | A forma de pagamento (opções aceitas: _credit_card_, _debit_card_, _boleto_, _bank_transfer_, _pix_, _cash_, _bank_check_, _others_).
 acquirer_slug | Sim (caso payment_method é _credit_card_ ou _debit_card_)| O identificador da adquirente (opções aceitas: _redecard_)
 card_brand | Sim (caso payment_method é _credit_card_ ou _debit_card_)| A bandeira do cartão de crédito utilizado (opções aceitas: _agiplan_, _amex_, _aura_, _banescard_, _banrisul_, _cabal_, _convenio_loja_, _credsystem_, _credz_, _diners_, _elo_, _hipercard_, _jcb_, _maestro_, _mastercard_, _outros_, _redecard_, _redeshop_, _sorocred_, _valecard_, _visa_, _visa_electron_)
 payment_processed_at | Sim | A data e hora em que o pagamento foi processado.
