@@ -10,6 +10,7 @@ toc_footers:
 includes:
   - receivables/criar
   - receivables/cancelar
+  - receivables/estornar
 
 search: false
 
