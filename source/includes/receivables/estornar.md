@@ -2,6 +2,10 @@
 
 Estornar recebível na entidade, a qual o `fintera_api_token` pertence.
 
+**Pré-requisitos**
+
+É necessário que o recebível esteja *liquidado* para que se possa solicitar estorno.
+
 **Endpoint**
 
 `PUT api/v1/receivables/<RECEIVABLE_ID>/refund`
