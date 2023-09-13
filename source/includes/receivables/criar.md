@@ -15,6 +15,7 @@ curl --location --request POST 'https://recebiveis.fintera.com.br/api/v1/receiva
 --header 'Content-Type: application/json' \
 --data-raw '{
   "receivable": {
+    "external_id": "5eb1c5f2-75b5-43b4-8f48-3c25338821ff",
     "description": "Compra de roupas",
     "observation": "Pedido feito pelo site",
     "gross_value": 200.50,
@@ -67,7 +68,7 @@ curl --location --request POST 'https://recebiveis.fintera.com.br/api/v1/receiva
     "entity_id": "bb9880e5-751c-45ed-a713-4a0a13768e7f",
     "created_at": "2023-03-16T15:34:55.983-03:00",
     "updated_at": "2023-03-16T15:34:55.983-03:00",
-    "external_id": null,
+    "external_id": "5eb1c5f2-75b5-43b4-8f48-3c25338821ff",
     "status": "liquidate",
     "integration_id": null,
     "bank_code": null,
@@ -87,6 +88,7 @@ curl --location --request POST 'https://recebiveis.fintera.com.br/api/v1/receiva
 
 Atributo  | Obrigatório | Descrição
 --------- | ----------- | -----------
+external_id | Não | Id externo do pagamento de origem do recebível (Se informado, terá sua unicidade validada).
 description | Não | Descrição do recebível.
 observation | Não | Observações adicionais.
 gross_value | Sim | O valor bruto do recebível, sem descontos ou taxas.
