@@ -47,6 +47,7 @@ curl --location --request PUT 'https://recebiveis.fintera.com.br/api/v1/receivab
     "created_at": "2023-03-16T15:34:55.983-03:00",
     "updated_at": "2023-03-16T15:34:55.983-03:00",
     "external_id": null,
+    "deposit_account_id": null,
     "integration_id": null,
     "bank_code": null,
     "bank_agency": null,

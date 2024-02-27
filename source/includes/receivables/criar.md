@@ -15,6 +15,7 @@ curl --location --request POST 'https://recebiveis.fintera.com.br/api/v1/receiva
 --header 'Content-Type: application/json' \
 --data-raw '{
   "receivable": {
+    "deposit_account_id": 29,
     "external_id": "5eb1c5f2-75b5-43b4-8f48-3c25338821ff",
     "description": "Compra de roupas",
     "observation": "Pedido feito pelo site",
@@ -69,6 +70,7 @@ curl --location --request POST 'https://recebiveis.fintera.com.br/api/v1/receiva
     "created_at": "2023-03-16T15:34:55.983-03:00",
     "updated_at": "2023-03-16T15:34:55.983-03:00",
     "external_id": "5eb1c5f2-75b5-43b4-8f48-3c25338821ff",
+    "deposit_account_id": 29,
     "status": "liquidate",
     "integration_id": null,
     "bank_code": null,
@@ -88,6 +90,7 @@ curl --location --request POST 'https://recebiveis.fintera.com.br/api/v1/receiva
 
 Atributo  | Obrigatório | Descrição
 --------- | ----------- | -----------
+deposit_account_id | Não | Id externo da conta caixa do Financeiro.
 external_id | Não | Id externo do pagamento de origem do recebível (Se informado, terá sua unicidade validada).
 description | Não | Descrição do recebível.
 observation | Não | Observações adicionais.
