@@ -62,7 +62,8 @@ curl --location --request PUT 'https://recebiveis.fintera.com.br/api/v1/receivab
     "payable_reconciliation_id": null,
     "cancellation_reason": null,
     "cancellation_adjustment_id": null,
-    "anticipated": false
+    "anticipated": false,
+    "danfe_url": "https://www.exemplo.com/danfe/123456789"
 }
 ```
 
