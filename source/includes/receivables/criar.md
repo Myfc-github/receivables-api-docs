@@ -32,7 +32,8 @@ curl --location --request POST 'https://recebiveis.fintera.com.br/api/v1/receiva
     "document_date": "2023-03-16",
     "customer_document": "1111111111111",
     "customer_name": "Joyce da Silva",
-    "nfe_url": "https://www.exemplo.com/nfe/123456789"
+    "nfe_url": "https://www.exemplo.com/nfe/123456789",
+    "danfe_url": "https://www.exemplo.com/danfe/123456789"
   }
 }'
 ```
@@ -82,7 +83,8 @@ curl --location --request POST 'https://recebiveis.fintera.com.br/api/v1/receiva
     "payable_reconciliation_id": null,
     "cancellation_reason": null,
     "cancellation_adjustment_id": null,
-    "anticipated": false
+    "anticipated": false,
+    "danfe_url": "https://www.exemplo.com/danfe/123456789"
 }]
 ```
 
@@ -108,3 +110,4 @@ document_date | Não |  Data da emissão da Nota Fiscal.
 customer_document | Não | Documento (CPF/CNPJ) do cliente.
 customer_name | Não | O nome do cliente
 nfe_url | Não | A URL da Nota Fiscal.
+danfe_url | Não | A URL da DANFE.
