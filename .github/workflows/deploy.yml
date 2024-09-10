@@ -33,11 +33,11 @@ jobs:
 
       # Inicia o container do Slate, pois iremos fazer o build dentro do container que já possui todas as dependências necessárias.
       - name: Start Docker Compose
-        run: docker-compose up -d
+        run: docker compose up -d
 
       # Realizar o build dos arquivos da documentação que estão em ./source para a pasta ./build.
       - name: Build docs
-        run: docker-compose exec -T slate sh -c 'bundle exec middleman build'
+        run: docker compose exec -T slate sh -c 'bundle exec middleman build'
 
       # Realizar a configuração do GitHub Pages.
       - name: Setup Pages
