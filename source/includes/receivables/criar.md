@@ -97,8 +97,8 @@ external_id | Não | Id externo do pagamento de origem do recebível (Se informa
 description | Não | Descrição do recebível.
 observation | Não | Observações adicionais.
 gross_value | Sim | O valor bruto do recebível, sem descontos ou taxas.
-payment_method | Sim | A forma de pagamento (opções aceitas: _credit_card_, _debit_card_, _boleto_, _bank_transfer_, _pix_, _cash_, _bank_check_, _others_).
-acquirer_slug | Não | O identificador da adquirente (opções aceitas: _cielo_, _getnet_, _pagseguro_, _redecard_, _stone_, _sipag_)
+payment_method | Sim | A forma de pagamento (opções aceitas: _credit_card_, _debit_card_, _boleto_, _bank_transfer_, _pix_, _cash_, _bank_check_, _voucher_, _others_).
+acquirer_slug | Não | O identificador da adquirente (opções aceitas: _cielo_, _getnet_, _pagseguro_, _redecard_, _stone_, _sipag_, _ticket_, _vr_, _sodexo_, _ben_visa_vale_, _alelo_)
 card_brand | Sim (caso payment_method seja _credit_card_ ou _debit_card_ e o _acquirer_slug_ tenha sido informado) | A bandeira do cartão de crédito utilizado (opções aceitas: _agiplan_, _amex_, _aura_, _banescard_, _banrisul_, _cabal_, _convenio_loja_, _credsystem_, _credz_, _diners_, _elo_, _hipercard_, _jcb_, _maestro_, _mastercard_, _outros_, _redecard_, _redeshop_, _sorocred_, _valecard_, _visa_, _visa_electron_)
 payment_processed_at | Sim | A data e hora em que o pagamento foi processado, com fuso de Brasília.
 installments_count | Sim | O número total de parcelas.
